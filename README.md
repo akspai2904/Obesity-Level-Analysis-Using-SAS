@@ -1,59 +1,95 @@
-# Estimation of Obesity Levels Using SAS Studio
+# Obesity Level Analysis Using SAS Studio
 
-**Statistical analysis of eating habits, physical activity, and factors associated with obesity**
+## Project Overview
 
-**Tools:** SAS Studio · ANOVA · Moderation Analysis · One-Sample t-Test · Binary Logistic Regression
+This project investigates the relationship between eating habits, physical activity, demographic characteristics, and obesity levels using SAS Studio.
 
-## Project overview
+The analysis uses a dataset of **2,111 observations** and applies statistical techniques to examine factors associated with Body Mass Index (BMI) and obesity classification.
 
-This academic group project examines associations between eating habits, physical condition, demographic factors, and body mass index (BMI). Using a dataset of **2,111 observations**, the team conducted four statistical analyses in **SAS Studio** and interpreted the results.
+## Tools & Technologies
 
-> This repository includes the dataset and the original group report with SAS output screenshots. The SAS source programs are not available in this repository.
+- SAS Studio
+- Microsoft Excel
+- Statistical Hypothesis Testing
+- Regression Analysis
+- Data Visualization
 
-## Research questions and methods
+## Research Objectives
 
-| Research question | Statistical method |
-| --- | --- |
-| Does mean BMI differ by snacking frequency? | One-way ANOVA with Tukey–Kramer comparisons |
-| Does gender moderate the association between physical activity and BMI? | Regression with gender × activity interaction terms |
-| Is mean BMI different from the reference value of 24.9? | One-sample t-test |
-| Which characteristics are associated with the likelihood of obesity? | Binary logistic regression |
+1. Determine whether average BMI differs significantly across snacking habits.
+2. Examine whether gender moderates the relationship between physical activity and BMI.
+3. Test whether the sample mean BMI differs significantly from a reference BMI of 24.9.
+4. Identify factors associated with the likelihood of obesity.
 
-## Selected findings
+## Statistical Analysis & Key Findings
 
-- **Snacking frequency and BMI:** ANOVA found differences in mean BMI across snacking categories (**F = 159.99, p < 0.0001**; reported R² ≈ 0.186). The report notes that the 'sometimes' group had the highest mean BMI (≈ 31.19) and the 'frequently' group the lowest (≈ 20.90).
-- **Gender and physical activity:** The fitted interaction model was significant overall (**p < 0.0001**), with reported gender × activity interaction p-values of **0.0331** and **0.0089**. The model's explanatory power was limited (adjusted R² ≈ 0.030).
-- **Mean BMI comparison:** The sample mean BMI was approximately **29.70**, significantly different from the project's reference BMI of **24.9** (**p < 0.0001**).
-- **Obesity classification model:** The report identified age, weight, alcohol consumption, family history, and high-calorie food consumption as statistically significant factors in the fitted logistic model. It reported a **c-statistic of 0.973** (a measure of discrimination, **not** classification accuracy).
+### 1. Analysis of Variance (ANOVA)
 
-These are associations within the analyzed dataset, not evidence of causal effects or independently validated predictive performance.
+**Objective:** Determine whether average BMI differs across snacking habits.
 
-## Repository contents
+**Results:**
+- F-statistic: 159.99
+- p-value: < 0.0001
+- R²: 0.1855
 
-```text
-Obesity-Level-Analysis-Using-SAS/
-├── README.md
-├── data/
-│   └── ObesityDataSet_raw_and_data_sinthetic_v1_updated.xlsx
-└── reports/
-    └── Estimation of Obesity Levels Based on Eating Habits and Physical Condition- Group A.pdf
-```
+**Finding:** Average BMI differed significantly across snacking categories. Participants who reported snacking sometimes had the highest average BMI (31.19), while frequent snackers had the lowest (20.90).
 
-## Explore the work
+### 2. Moderation Analysis
 
-1. Open the [full analysis report](reports/Estimation%20of%20Obesity%20Levels%20Based%20on%20Eating%20Habits%20and%20Physical%20Condition-%20Group%20A.pdf) for research questions, SAS output screenshots, and interpretations.
-2. Download the [Excel dataset](data/ObesityDataSet_raw_and_data_sinthetic_v1_updated.xlsx) to inspect the observations and variables.
+**Objective:** Examine whether gender moderates the relationship between physical activity and BMI.
 
-## Team and attribution
+**Results:**
+- Adjusted R²: 0.0299
+- Overall model p-value: < 0.0001
+- Significant gender-by-physical-activity interaction terms
 
-This was a **group project** for **OMIS 645 – Applied Business Analytics Using SAS**, Department of Operations Management & Information Systems.
+**Finding:** The association between physical activity and BMI differed by gender in the fitted model.
 
-**Team members:** Rochna Trivedi, Tanvi Agarwal, Adhwaith S, and Akshata Pai.
+### 3. One-Sample T-Test
 
-The analysis and report are credited to the group; individual contributions are not specified in the provided report.
+**Objective:** Compare the sample mean BMI with a reference value of 24.9.
 
-## Limitations
+**Results:**
+- Sample size: 2,111
+- Mean BMI: Approximately 29.70
+- p-value: < 0.0001
 
-- The repository does not contain the original SAS code, so the analysis cannot be reproduced directly from scripts here.
-- Findings are based on the dataset and analyses documented in the group report; no independent model validation is supplied.
-- The 24.9 BMI value is the **reference used in the project report**; it should not be interpreted as a universal population mean.
+**Finding:** The sample mean BMI was significantly higher than the reference value.
+
+### 4. Binary Logistic Regression
+
+**Objective:** Investigate factors associated with obesity classification.
+
+**Predictors examined:**
+- Age
+- Weight
+- Alcohol consumption
+- Family history of obesity
+- High-calorie food consumption
+
+**Finding:** All five predictors were statistically significant in the fitted model. The reported concordance statistic (c) was 0.973, indicating strong discrimination within the analyzed dataset.
+
+## Project Files
+
+- **Dataset:** [View Excel Dataset](data/ObesityDataSet_raw_and_data_sinthetic_v1_updated.xlsx)
+- **SAS Analysis Report:** [View Complete Analysis Report](reports/Estimation%20of%20Obesity%20Levels%20Based%20on%20Eating%20Habits%20and%20Physical%20Condition-%20Group%20A.pdf)
+
+The PDF report contains SAS Studio output screenshots, statistical results, diagnostic plots, and detailed interpretations.
+
+**Note:** The original SAS source code is not included in this repository.
+
+## Project Contributors
+
+This project was completed as part of OMIS 645 – Applied Business Analytics Using SAS.
+
+**Team Members:**
+- Rochna Trivedi
+- Tanvi Agarwal
+- Adhwaith S
+- Akshata Pai
+
+## Conclusion
+
+This project demonstrates the application of statistical techniques using SAS Studio to investigate obesity-related patterns and evaluate relationships between lifestyle factors and BMI.
+
+The findings highlight the value of statistical modeling and hypothesis testing in extracting insights from structured datasets.
